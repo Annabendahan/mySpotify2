@@ -1,0 +1,174 @@
+.banner{
+  width: 100%;
+
+  background-size: cover !important;
+  background-position: center;
+  position: relative;
+z-index: 2;
+
+}
+
+
+.artist{
+  text-align: center;
+  width: 100%;
+
+
+
+}
+
+.song{
+
+  margin:5px;
+  float:left;
+
+}
+
+
+.albums{
+  display: flex;
+
+}
+
+.album{
+
+  margin:5px;
+  float:left;
+  position: relative;
+
+}
+
+.album:hover > .filter{
+  visibility: visible;
+  cursor: pointer
+}
+
+
+.filter{
+  visibility: hidden;
+  position: absolute;
+  top: 0px;
+  left:0px;
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 0, 0, .8 );
+  color: white;
+  text-align: center;
+
+}
+
+.album svg{
+  margin-top: 30%;
+}
+
+
+.album p{
+  font-size: .7rem;
+}
+
+.songs{
+  flex: 0 0 55%;
+
+}
+
+
+
+
+.song-pic{
+  width:200px;
+}
+
+
+.album-pic{
+  width:200px;
+}
+
+
+
+.artist-name{
+padding: 10px;
+padding-top: 250px
+}
+
+
+.artist-details{
+
+position: relative;
+z-index: 1;
+padding: 50px;
+  background: #080808;
+
+}
+
+.artist h2{
+  color: white;
+  font-weight:700;
+  font-size: 3rem;
+}
+
+
+.artist h4{
+  color: white;
+  font-weight:500;
+  font-size: .8rem;
+
+
+}
+
+
+.artist h3{
+  text-align: left;
+  color: white;
+  font-weight:700;
+  font-size: 1.8rem;
+
+}
+
+
+.tracks{
+  background: #080808;
+  color: white;
+  width: 100%;
+
+}
+
+
+.track{
+  display: flex;
+  border-top: .25px solid rgba(255, 255, 255, .7);
+  justify-content: space-between;
+  padding: 0px 20px;
+  font-family: Roboto;
+  font-size: .7rem
+}
+
+
+.track p{
+  margin-bottom: 7px;
+  margin-top: 7px
+}
+
+.song_num {
+  flex: 0 0 10%;
+}
+
+.song_pic{
+  flex: 0 0 10%;
+}
+
+
+.song_name {
+flex: 0 0 40%;
+text-align: left;
+margin-left: 50px
+
+}
+
+
+.artist_name{
+  flex: 0 0 30%;
+}
+
+.duration{
+  flex: 0 0 20%;
+}
