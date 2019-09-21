@@ -2,6 +2,8 @@ import React, {Component} from "react"
 import { getUser } from "../services/auth"
 import ReactHowler from 'react-howler'
 import {Howl, Howler} from 'howler';
+import './profile.css'
+import pic1 from "../images/spotify.png"
 
 class Profile extends Component {
 
@@ -143,28 +145,35 @@ render() {
 
   return(
 
-     <div>
+     <div className="background-p">
 
-      <h1>Your profile</h1>
-    <ul>
-      <li>Name: {getUser().name}</li>
-      <li>E-mail: {getUser().email}</li>
-      <p onClick={this.getArtist}> CLICK</p>
-      <p onClick={this.getCode}> CLICK2</p>
-      <form>
-      <input
-        type="text"
-        onChange={this.myChangeHandler}/>
-      {this.state.inputValue}
-      </form>
+     <div className="bonjour">
 
+       <div className="part-left">
 
-      ARTIST : {this.state.artist_names} {this.state.artist_popularity}
+        <h1>Bonjour {getUser().name} !</h1>
+        <p> Retrouvez toutes vos informations ici </p>
+
+       </div>
+
+      <img className="" src={pic1}/>
+
+    </div>
 
 
+      <div className="profile-infos">
 
-    </ul>
-    play song
+
+
+      <h2> Profil </h2>
+
+        <div className="line"> <p className="int"> Name </p> <p className="int2"> {getUser().name} </p> </div>
+        <div className="line"> <p className="int"> E-mail </p> <p className="int2"> {getUser().email} </p> </div>
+        <div className="line"> <p className="int"> Pays </p> <p className="int2"> France </p> </div>
+
+      </div>
+
+
     <ReactHowler
         src='https://api.spotify.com/v1/tracks/4PjcfyZZVE10TFd9EKA72r'
         playing={this.state.playing}

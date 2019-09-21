@@ -15,7 +15,7 @@ export default () => (
       <p>
         {isLoggedIn() ? (
           <>
-            <p> Hello {getUser().name}!</p>
+
 
 
 

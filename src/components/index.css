@@ -4,18 +4,21 @@
   color: white;
   font-weight: 700;
   width: 100%;
+  padding: 50px;
 }
 
 
 
 
 .desc{
-  flex: 0 0 25%;
-  padding: 20px;
+  flex: 0 0 40%;
+padding: 0px 30px;
 }
 
 
-
+.desc h1{
+  font-weight: 900;
+}
 
 
 .button-green{
@@ -24,7 +27,9 @@ color: white;
 font-size: 16px;
     line-height: 1;
     border-radius: 500px;
+    margin-left: 100px;
     padding: 19px 56px 21px;
+
 }
 
 
@@ -44,5 +49,19 @@ background: linear-gradient(180deg, rgba(124, 225, 248, 0.68) 0%, rgba(255, 255,
    background: #080808;
 
 }
+
+
+.background-p{
+  background: linear-gradient(180deg, #030A49 0%, rgba(34, 44, 136, 0) 100%), #0A0808;
+  color: white;
+  padding: 50px;
+  min-height: 100vh;
+}
+
+
+.background-p h1{
+font-weight: 900;
+font-size: 3rem; }
+
 
 

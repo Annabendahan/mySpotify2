@@ -8,6 +8,11 @@ z-index: 2;
 
 }
 
+.artists-list{
+  color: white;
+
+}
+
 
 .artist{
   text-align: center;
@@ -66,10 +71,7 @@ z-index: 2;
   font-size: .7rem;
 }
 
-.songs{
-  flex: 0 0 55%;
 
-}
 
 
 

@@ -1,0 +1,54 @@
+
+.line{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: .5px solid #DFDBDB;
+}
+
+
+.profile-infos{
+  background: white;
+  color: black;
+  padding: 60px 70px;
+  padding-bottom: 110px;
+  margin-top: -400px;
+  position: relative;
+  z-index: 5;
+
+}
+
+
+.profile-infos h2{
+  font-weight: 800
+}
+
+
+.line p {
+  margin-top: 15px;
+  font-size: .8rem;
+  margin-bottom: 15px;
+}
+
+
+.int{
+  flex: 0 0 60%;
+  color: grey;
+}
+
+
+.int2{
+  flex: 0 0 40%;
+  text-align: left
+}
+
+
+.bonjour{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+
+.part-left {
+  padding: 40px;
+}

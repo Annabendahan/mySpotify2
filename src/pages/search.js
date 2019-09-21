@@ -11,7 +11,8 @@ class Search extends Component {
     inputValue: "",
     artist_pic_url: "",
     artist_albums: [],
-    album_tracks: []
+    album_tracks: [],
+    artists: []
   }
 
 myChangeHandler = (event) => {
@@ -20,33 +21,46 @@ myChangeHandler = (event) => {
 
 
 
-getCode = () => {
-
-   let artist_name = "chilla"
-  let token = "BQCbKexeHiaQhpjnupHwzArVZebjaPICa6nE__Phg5iqf1iPP6x2uffovOa0oAwrbiir8UT-vuVEl0_JEenHjMOESNM_6Ro-O1oci-srUjrsG9UjRvyB-h8EpTEDEi4aiuuIS6-CyZKSREBtWizUE2AdkYqpggxaom7HnTc3"
 
 
-  fetch(`https://api.spotify.com/v1/search?q=tania%20bowra&type=artist`, {
+getCode2 = () => {
+  let token = "BQDJD-U0Mc-pI6QeOJq7qc5rmm-vx6owHdBG8jAXXNC-yGZTzs5yq2jF8h3rVGc0-HkpIyU5JTZCklcq5gpZ8qV6dKxLH4a-jGc87_gnejqKk9EaIubeuMx9VXipxpi5S8T-hsrMII3QIb4TPi_-72iH0nuD5hKReX9DTdHf"
+let url = "https://api.spotify.com/v1/search?q=chilla&type=artist"
+let artists = []
+
+fetch(url, {
   method: "GET",
-  mode: 'no-cors',
   headers: {
-    Authorization: `Bearer ${token}`, 'Access-Control-Allow-Origin':'*'
+    Authorization: `Bearer ${token}`
   }
 })
 .then(response =>  {
 
- console.log(response)
+ console.log(`CODE ${response}`)
+  response.json().then((data) => {
+        console.log(data);
+        data.artists.items.forEach((a, i) => {
+    console.log(a)
+
+              artists.push(a)
+              this.setState({ artists: artists })
+
+  })
+
+
+    });
+
 
 
 })
+
 }
 
 
-getArtist = () => {
+getArtist = (artist_id) => {
 
-   let artist_id = "1ywkNtrO3WGuwaehqxyjAO"
   let user_id= "oql91c8w5ogq0nxa0nk81yxjb"
-  let token = "BQCbKexeHiaQhpjnupHwzArVZebjaPICa6nE__Phg5iqf1iPP6x2uffovOa0oAwrbiir8UT-vuVEl0_JEenHjMOESNM_6Ro-O1oci-srUjrsG9UjRvyB-h8EpTEDEi4aiuuIS6-CyZKSREBtWizUE2AdkYqpggxaom7HnTc3"
+  let token = "BQDJD-U0Mc-pI6QeOJq7qc5rmm-vx6owHdBG8jAXXNC-yGZTzs5yq2jF8h3rVGc0-HkpIyU5JTZCklcq5gpZ8qV6dKxLH4a-jGc87_gnejqKk9EaIubeuMx9VXipxpi5S8T-hsrMII3QIb4TPi_-72iH0nuD5hKReX9DTdHf"
   let artists_url = `https://api.spotify.com/v1/artists/${artist_id}`
   let playlists_url = `https://api.spotify.com/v1/users/"${user_id}/playlists`
 
@@ -77,7 +91,7 @@ getAlbums = (artist_id) => {
 
 
   let user_id= "oql91c8w5ogq0nxa0nk81yxjb"
-  let token = "BQCbKexeHiaQhpjnupHwzArVZebjaPICa6nE__Phg5iqf1iPP6x2uffovOa0oAwrbiir8UT-vuVEl0_JEenHjMOESNM_6Ro-O1oci-srUjrsG9UjRvyB-h8EpTEDEi4aiuuIS6-CyZKSREBtWizUE2AdkYqpggxaom7HnTc3"
+  let token = "BQDJD-U0Mc-pI6QeOJq7qc5rmm-vx6owHdBG8jAXXNC-yGZTzs5yq2jF8h3rVGc0-HkpIyU5JTZCklcq5gpZ8qV6dKxLH4a-jGc87_gnejqKk9EaIubeuMx9VXipxpi5S8T-hsrMII3QIb4TPi_-72iH0nuD5hKReX9DTdHf"
   let albums_url = `https://api.spotify.com/v1/artists/${artist_id}/albums`
   let playlists_url = `https://api.spotify.com/v1/users/"${user_id}/playlists`
   let albums= []
@@ -118,7 +132,7 @@ getAlbums = (artist_id) => {
 
 getAlbumTracks = (album_id) =>{
 
-  let token = "BQCbKexeHiaQhpjnupHwzArVZebjaPICa6nE__Phg5iqf1iPP6x2uffovOa0oAwrbiir8UT-vuVEl0_JEenHjMOESNM_6Ro-O1oci-srUjrsG9UjRvyB-h8EpTEDEi4aiuuIS6-CyZKSREBtWizUE2AdkYqpggxaom7HnTc3"
+  let token = "BQDJD-U0Mc-pI6QeOJq7qc5rmm-vx6owHdBG8jAXXNC-yGZTzs5yq2jF8h3rVGc0-HkpIyU5JTZCklcq5gpZ8qV6dKxLH4a-jGc87_gnejqKk9EaIubeuMx9VXipxpi5S8T-hsrMII3QIb4TPi_-72iH0nuD5hKReX9DTdHf"
   let album_tracks_url = `https://api.spotify.com/v1/albums/${album_id}/tracks`
   let tracks = []
 
@@ -161,6 +175,7 @@ render() {
 
 let albums = []
 let tracks = []
+let artists = []
 
 let pic = this.state.artist_pic_url
 
@@ -202,6 +217,26 @@ this.state.album_tracks.forEach((a,i) =>{
 
        })
 
+
+this.state.artists.forEach((a, i) => {
+  {if (a.images.length > 0 ) {
+  artists.push(
+
+    <div onClick={() => this.getArtist(a.id)} className="">
+
+
+    <p> {a.name} </p>
+
+    <img className="album-pic" src={a.images[0].url}/>
+
+
+
+
+    </div>
+
+    )}}
+})
+
 console.log(pic)
 console.log(tracks)
 console.log(this.state.album_tracks)
@@ -223,6 +258,8 @@ console.log(this.state.album_tracks)
 
 
           <p onClick={this.getArtist}> CLICK</p>
+           <p onClick={this.getCode}> CLICKCODE</p>
+            <p onClick={this.getCode2}> CLICKCODE2</p>
 
           <form>
           <input
@@ -232,7 +269,7 @@ console.log(this.state.album_tracks)
           </form>
 
         </div>
-
+          <div className="artists-list"> {artists} </div>
 
 
 
