@@ -18,30 +18,12 @@ myChangeHandler = (event) => {
 
 
 
-getCode = () => {
-
-   let artist_name = "chilla"
-  let token = "BQDJD-U0Mc-pI6QeOJq7qc5rmm-vx6owHdBG8jAXXNC-yGZTzs5yq2jF8h3rVGc0-HkpIyU5JTZCklcq5gpZ8qV6dKxLH4a-jGc87_gnejqKk9EaIubeuMx9VXipxpi5S8T-hsrMII3QIb4TPi_-72iH0nuD5hKReX9DTdHf"
-  fetch(`https://api.spotify.com/v1/search?q=tania%20bowra&type=artist`, {
-  method: "GET",
-  headers: {
-    Authorization: `Bearer ${token}`, 'Access-Control-Allow-Origin':'*'
-  }
-})
-.then(response =>  {
-
- console.log(response)
-
-
-})
-}
-
 
 componentDidMount = () => {
 
    let playlist_id = "37i9dQZEVXblh2kb8O99zT"
   let user_id= "oql91c8w5ogq0nxa0nk81yxjb"
-  let token = "BQDJD-U0Mc-pI6QeOJq7qc5rmm-vx6owHdBG8jAXXNC-yGZTzs5yq2jF8h3rVGc0-HkpIyU5JTZCklcq5gpZ8qV6dKxLH4a-jGc87_gnejqKk9EaIubeuMx9VXipxpi5S8T-hsrMII3QIb4TPi_-72iH0nuD5hKReX9DTdHf"
+  let token = "BQDL_kNSl0ulogjpeanbLpXnfj6IOf8PuZrbKx1FmEJKsi01JuRUib_muBU20ShUk_OLL9-_DoozNpAyM2oGmIGn9MXK-hLa0rf254mF8vvHqbni6jH_jf_udy-ZQZicj0x11qaErfWbol9AiKEqr5oRIK9Dxo4nonz3Jmi0"
 let playlist_tracks= this.state.playlist_tracks
   let playlists_url = `https://api.spotify.com/v1/playlists/${playlist_id}`
 

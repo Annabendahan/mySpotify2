@@ -26,7 +26,8 @@ class Login extends React.Component {
 
     return (
       <>
-        <h1>Log in</h1>
+      <div className="background-p">
+        <h1>De la musique pour tous</h1>
         <form
           method="post"
           onSubmit={event => {
@@ -35,11 +36,11 @@ class Login extends React.Component {
           }}
         >
           <label>
-            Username
+
             <input type="text" name="username" onChange={this.handleUpdate} />
           </label>
           <label>
-            Password
+
             <input
               type="password"
               name="password"
@@ -48,6 +49,7 @@ class Login extends React.Component {
           </label>
           <input type="submit" value="Log In" />
         </form>
+        </div>
       </>
     )
   }

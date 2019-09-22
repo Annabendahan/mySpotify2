@@ -22,8 +22,7 @@ export default () => (
           </>
         ) : (
           <>
-            You should <Link to="/app/login">log in</Link> to see restricted
-            content
+            <Link to="/app/login">log in</Link>
           </>
         )}
 

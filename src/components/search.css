@@ -1,12 +1,4 @@
-.banner{
-  width: 100%;
 
-  background-size: cover !important;
-  background-position: center;
-  position: relative;
-z-index: 2;
-
-}
 
 .artists-list{
   color: white;
@@ -32,6 +24,8 @@ z-index: 2;
 
 .albums{
   display: flex;
+  float: left;
+
 
 }
 
@@ -83,13 +77,22 @@ z-index: 2;
 
 .album-pic{
   width:200px;
+  min-width:200px;
 }
 
 
 
 .artist-name{
 padding: 10px;
-padding-top: 250px
+padding-top: 250px;
+
+}
+
+
+.artist-name-2{
+  text-align: center;
+  font-weight: 500;
+  font-size: 1rem
 }
 
 
@@ -100,6 +103,12 @@ z-index: 1;
 padding: 50px;
   background: #080808;
 
+}
+
+
+.artist-pic{
+  border-radius: 50%;
+  width: 200px;
 }
 
 .artist h2{
@@ -131,6 +140,7 @@ padding: 50px;
   background: #080808;
   color: white;
   width: 100%;
+
 
 }
 
@@ -173,4 +183,22 @@ margin-left: 50px
 
 .duration{
   flex: 0 0 20%;
+}
+
+.album-display {
+  padding: 30px;
+  display: flex
+}
+
+.album-infos{
+  flex: 0 0 25%;
+}
+
+
+input{
+  border: none;
+  background: #292929;
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
 }
