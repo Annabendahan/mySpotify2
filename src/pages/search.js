@@ -257,32 +257,31 @@ style = {{
 }}>
 
 <div className="artist-name">
-<h2> {this.state.artist_name} </h2>
-<h4> VUE D'ENSEMBLE </h4>
+  <h2> {this.state.artist_name} </h2>
+  <h4> VUE D'ENSEMBLE </h4>
 </div>
 
 <div className="artist-details">
-<h3> Albums </h3>
-<div className="albums">
-{albums}
-</div>
-</div>
+  <h3> Albums </h3>
+    <div className="albums">
+    {albums}
+    </div>
+  </div>
 </div>
 
 
 
 let album_details =   <div className="album-display">
-<div className="album-infos">
-<img className="album-pic" src={this.state.album_pic}/>
-<h3> {this.state.album_title} </h3>
-<p className="album-artist"> {this.state.artist_name} </p>
-<p className="date"> {this.state.track_number} TITRES  •  {this.state.date} </p>
-
-</div>
-<div className="tracks">
-{tracks}
-</div>
-</div>
+                          <div className="album-infos">
+                            <img className="album-pic" src={this.state.album_pic}/>
+                            <h3> {this.state.album_title} </h3>
+                            <p className="album-artist"> {this.state.artist_name} </p>
+                            <p className="date"> {this.state.track_number} TITRES  •  {this.state.date} </p>
+                          </div>
+                          <div className="tracks">
+                          {tracks}
+                          </div>
+                      </div>
 
 
 if (this.state.display === "artists") {
@@ -302,15 +301,15 @@ this.state.artist_albums.forEach((a,i) =>{
 
 
     <div key={a.id} className="album">
-    <img className="album-pic" src={a.images[0].url}/>
-    <div onClick={() => this.getAlbum(a.id)} className="filter">
-    <svg width="25" height="26" viewBox="0 0 55 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M53.5 28C53.5 42.6611 41.834 54.5 27.5 54.5C13.166 54.5 1.5 42.6611 1.5 28C1.5 13.3389 13.166 1.5 27.5 1.5C41.834 1.5 53.5 13.3389 53.5 28Z" stroke="white" stroke-width="3"/>
-    <path d="M37.064 28.4686L21.3614 37.5345V19.4027L37.064 28.4686Z" fill="white"/>
-    </svg>
-    <p> {a.name} </p>
-    <p> {a.artist} </p>
-    </div>
+      <img className="album-pic" src={a.images[0].url}/>
+      <div onClick={() => this.getAlbum(a.id)} className="filter">
+        <svg width="25" height="26" viewBox="0 0 55 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M53.5 28C53.5 42.6611 41.834 54.5 27.5 54.5C13.166 54.5 1.5 42.6611 1.5 28C1.5 13.3389 13.166 1.5 27.5 1.5C41.834 1.5 53.5 13.3389 53.5 28Z" stroke="white" stroke-width="3"/>
+        <path d="M37.064 28.4686L21.3614 37.5345V19.4027L37.064 28.4686Z" fill="white"/>
+        </svg>
+        <p> {a.name} </p>
+        <p> {a.artist} </p>
+      </div>
     </div>
 
     )
@@ -328,25 +327,20 @@ this.state.artist_albums.forEach((a,i) =>{
      <line x1="33.5" y1="36" x2="33.5" y2="20" stroke="white" stroke-width="3"/>
      </svg>
 
-   }else {
+   } else {
     control = <svg onClick={(e) => this.handlePlaySong(a.preview_url)} width="25" height="26" viewBox="0 0 55 56" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M53.5 28C53.5 42.6611 41.834 54.5 27.5 54.5C13.166 54.5 1.5 42.6611 1.5 28C1.5 13.3389 13.166 1.5 27.5 1.5C41.834 1.5 53.5 13.3389 53.5 28Z" stroke="white" stroke-width="3"/>
     <path d="M37.064 28.4686L21.3614 37.5345V19.4027L37.064 28.4686Z" fill="white"/>
     </svg>
-
   }
 
   tracks.push(
-  <div key={a.id} className="track">
-  <p className="song_num" > {a.track_number} </p>
-  {control}
-
-
-
-
-  <p className="song_name"> {a.name} </p>
-  <p className="duration"> {this.timeConverter(a.duration_ms)} </p>
-  </div>
+    <div key={a.id} className="track">
+      <p className="song_num" > {a.track_number} </p>
+      {control}
+      <p className="song_name"> {a.name} </p>
+      <p className="duration"> {this.timeConverter(a.duration_ms)} </p>
+    </div>
   )
 })
 
@@ -355,16 +349,16 @@ this.state.artists.forEach((a, i) => {
   {if (a.images.length > 0 ) {
     artists.push(
     <div key={a.id} className="albums">
-    <div className="album">
-    <img className="artist-pic" src={a.images[0].url}/>
-    <div onClick={() => this.getArtist(a.id)} className="filter2">
-    <svg width="55" height="56" viewBox="0 0 55 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M53.5 28C53.5 42.6611 41.834 54.5 27.5 54.5C13.166 54.5 1.5 42.6611 1.5 28C1.5 13.3389 13.166 1.5 27.5 1.5C41.834 1.5 53.5 13.3389 53.5 28Z" stroke="white" stroke-width="3"/>
-    <path d="M37.064 28.4686L21.3614 37.5345V19.4027L37.064 28.4686Z" fill="white"/>
-    </svg>
-    </div>
-    <p className="artist-name-2"> {a.name} </p>
-    </div>
+      <div className="album">
+      <img className="artist-pic" src={a.images[0].url}/>
+      <div onClick={() => this.getArtist(a.id)} className="filter2">
+        <svg width="55" height="56" viewBox="0 0 55 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M53.5 28C53.5 42.6611 41.834 54.5 27.5 54.5C13.166 54.5 1.5 42.6611 1.5 28C1.5 13.3389 13.166 1.5 27.5 1.5C41.834 1.5 53.5 13.3389 53.5 28Z" stroke="white" stroke-width="3"/>
+        <path d="M37.064 28.4686L21.3614 37.5345V19.4027L37.064 28.4686Z" fill="white"/>
+        </svg>
+      </div>
+      <p className="artist-name-2"> {a.name} </p>
+      </div>
     </div>
 
     )}}
@@ -376,56 +370,42 @@ this.state.artists.forEach((a, i) => {
               token= {this.state.tokenValue} />)
 
 
-
-
-
-
   return(
   <Layout>
-  <div className="background-g">
+    <div className="background-g">
 
-  <div>
+      <div>
+        <div style={{
+        display: "flex",
+        background: "#292929",
+        padding: "20px 30px",
+        paddingBottom: "0px"
+      }}>
 
+        <form className="artist-form" onSubmit={this.getCode2}>
+        <label>
+        <input type="text" onClick={this.handleReset} value={this.state.inputValue} onChange={this.myChangeHandler} />
+        </label>
+        <input type="submit" value="" />
+        </form>
+      </div>
 
+      <ReactHowler
+        src= {this.state.song}
+        format= "mp3"
+        playing= {this.state.playing}
+      />
 
-    <div style={{
-    display: "flex",
-    background: "#292929",
-    padding: "20px 30px",
-    paddingBottom: "0px"
-  }}>
-
-    <form className="artist-form" onSubmit={this.getCode2}>
-  <label>
-  <input type="text" onClick={this.handleReset} value={this.state.inputValue} onChange={this.myChangeHandler} />
-  </label>
-  <input type="submit" value="" />
-  </form>
-  </div>
-
-
-
-
-
-
-  <ReactHowler
-  src= {this.state.song}
-  format= "mp3"
-  playing= {this.state.playing}
-  />
-
-  <div className="artists-list"> </div>
-  {display}
-  </div>
-  </div>
+      <div className="artists-list"> </div>
+      {display}
+      </div>
+    </div>
   </Layout>
 
   )
 }
 
 }
-
-
 
 
 

@@ -163,10 +163,8 @@ handleReset2 = (event) => {
 
 
 
-
     console.log(tracks.slice(0,5))
     console.log(`storage: ${localStorage.getItem('token')}`)
-
 
 
     return(

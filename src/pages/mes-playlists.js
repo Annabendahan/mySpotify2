@@ -111,14 +111,9 @@ this.state.my_playlists.forEach((a, i ) => {
 
         <Layout>
           <div className="background-g">
-
             {error}
-
-
-          <h1> Ma bibliothèque </h1>
-
-          {myPlaylists}
-
+            <h1> Ma bibliothèque </h1>
+            {myPlaylists}
           </div>
         </Layout>
 
