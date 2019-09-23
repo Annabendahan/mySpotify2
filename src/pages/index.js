@@ -10,25 +10,8 @@ import Layout from "../components/layout"
 
 export default () => (
   <Layout>
-  <div className="gradient">
-
-      <p>
+    <div className="gradient">
       <Nouveautes />
-        {isLoggedIn() ? (
-          <>
-
-
-
-
-          </>
-        ) : (
-          <>
-            <p className="login"> <Link to="/app/login">S'identifier</Link> </p>
-          </>
-        )}
-
-
-      </p>
     </div>
   </Layout>
 )

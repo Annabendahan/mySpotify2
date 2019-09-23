@@ -8,8 +8,7 @@ import Login from "../components/login"
 const App = () => (
   <Layout>
     <Router>
-      <PrivateRoute path="/app/profile" component={Profile} />
-      <Login path="/app/login" />
+
     </Router>
   </Layout>
 )

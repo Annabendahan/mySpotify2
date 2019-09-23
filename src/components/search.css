@@ -4,6 +4,11 @@
   color: red;
 }
 
+.erreur2{
+  color: red;
+  padding: 50px;
+}
+
 
 .artists-list{
   color: white;
@@ -25,21 +30,43 @@
 
 
 .albums{
-  display: flex;
+
   float: left;
+background: #080808;
 
 
 }
 
 .album{
 
+  margin:20px;
+  float:left;
+  position: relative;
+
+}
+
+
+.nv{
   margin:5px;
   float:left;
   position: relative;
 
 }
 
+
+
 .album:hover > .filter{
+  visibility: visible;
+  cursor: pointer
+}
+
+
+.album:hover > .filter2{
+  visibility: visible;
+  cursor: pointer
+}
+
+.nv:hover > .filter{
   visibility: visible;
   cursor: pointer
 }
@@ -52,7 +79,7 @@
   left:0px;
   width: 200px;
   height: 200px;
-  background: rgba(0, 0, 0, .8 );
+  background: rgba(0, 0, 0, .7 );
   color: white;
   text-align: center;
 
@@ -66,7 +93,7 @@
   left:0px;
   width: 200px;
   height: 200px;
-  background: rgba(0, 0, 0, .8 );
+  background: rgba(0, 0, 0, .7 );
   color: white;
   text-align: center;
   border-radius: 50%
@@ -77,6 +104,10 @@
   margin-top: 30%;
 }
 
+
+.nv svg{
+  margin-top: 30%;
+}
 
 .album p{
   font-size: .7rem;
@@ -92,19 +123,30 @@
 
 .song-pic{
   width:200px;
+  height:200px;
 }
 
 
 .album-pic{
   width:200px;
+
+  min-width:200px;
+}
+
+
+.nv-pic{
+  width:200px;
+
   min-width:200px;
 }
 
 
 
+
+
 .artist-name{
 padding: 10px;
-padding-top: 250px;
+padding-top: 150px;
 
 }
 
@@ -130,6 +172,7 @@ padding: 50px;
 .artist-pic{
   border-radius: 50%;
   width: 200px;
+  height:200px;
 }
 
 .artist h2{
@@ -161,6 +204,7 @@ padding: 50px;
   background: #080808;
   color: white;
   width: 100%;
+  margin-left: 30px
 
 
 }
@@ -176,6 +220,12 @@ padding: 50px;
 }
 
 
+.track:hover{
+
+background: grey;
+cursor: pointer}
+
+
 .track svg{
   margin-top: 11px;
 }
@@ -187,7 +237,7 @@ padding: 50px;
 }
 
 .song_num {
-
+flex: 0 0 7%;
 }
 
 .song_pic{
@@ -196,7 +246,7 @@ padding: 50px;
 
 
 .song_name {
-flex: 0 0 40%;
+flex: 1 0 0;
 text-align: left;
 margin-left: 50px
 
@@ -208,7 +258,7 @@ margin-left: 50px
 }
 
 .duration{
-  flex: 0 0 20%;
+  flex: 0 0 10%;
 }
 
 .album-display {
@@ -224,7 +274,7 @@ margin-left: 50px
 }
 
 
-input{
+.artist-form input{
   border: none;
   background: #292929;
   color: white;
@@ -236,4 +286,17 @@ input{
 .date{
   font-weight: 100;
   font-size: .7rem;
+}
+
+.pause{
+  visibility: hidden
+}
+
+.track:clicked > .pause{
+  visibility: visible
+}
+
+
+.pl-name{
+  color: white;
 }

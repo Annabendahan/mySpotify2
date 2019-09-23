@@ -69,36 +69,16 @@ if (this.state.name === undefined) {
   return(
 
     <Layout>
-
-       <div className="background-p">
-
-       <div className="bonjour">
-
-         <div className="part-left">
-
-          <h1>Bonjour!</h1>
-          <p> Retrouvez toutes vos informations ici </p>
-
+      <div className="background-p">
+         <div className="bonjour">
+           <div className="part-left">
+            <h1>Bonjour!</h1>
+            <p> Retrouvez toutes vos informations ici </p>
+           </div>
+          <img className="" src={pic1}/>
          </div>
-
-        <img className="" src={pic1}/>
-
+        <div className="profile-infos"> {profile}</div>
       </div>
-
-
-
-   <div className="profile-infos"> {profile}</div>
-
-
-
-
-
-
-
-
-
-      </div>
-
     </Layout>
 
 

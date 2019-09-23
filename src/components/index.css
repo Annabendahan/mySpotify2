@@ -4,7 +4,7 @@
   color: white;
   font-weight: 700;
   width: 100%;
-  padding: 50px;
+  padding: 40px 30px;
 }
 
 
@@ -12,7 +12,7 @@
 
 .desc{
   flex: 0 0 40%;
-padding: 0px 30px;
+padding: 0px 20px;
 }
 
 
@@ -21,13 +21,14 @@ padding: 0px 30px;
 }
 
 
+
 .button-green{
 background:  #1DB954;
 color: white;
 font-size: 16px;
     line-height: 1;
     border-radius: 500px;
-    margin-left: 100px;
+
     padding: 19px 56px 21px;
     font-weight: 700;
 
@@ -51,8 +52,15 @@ background: linear-gradient(180deg, rgba(124, 225, 248, 0.68) 0%, rgba(255, 255,
 }
 
 .background-g{
-   min-height: 200vh;
+   min-height: 300vh;
    background: #080808;
+   padding: 3%;
+
+}
+
+.background-g h1{
+   color: white;
+   padding: 15px;
 
 }
 
@@ -61,7 +69,7 @@ background: linear-gradient(180deg, rgba(124, 225, 248, 0.68) 0%, rgba(255, 255,
   background: linear-gradient(180deg, #030A49 0%, rgba(34, 44, 136, 0) 100%), #0A0808;
   color: white;
   padding: 50px;
-  min-height: 100vh;
+  min-height: 200vh;
 }
 
 
@@ -113,4 +121,18 @@ font-size: 3rem; }
   font-size: .8rem;
   margin: 30px;
 
+}
+
+
+.token-form{
+  font-weight: 200;
+ margin-left: 50px;
+}
+
+
+.token-form input{
+  background: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 20px;
 }

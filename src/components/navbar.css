@@ -35,6 +35,7 @@
 .deconnexion{
   position: absolute;
   bottom: 30px;
+  left:20px;
   color: rgba(219, 219, 219, .23)
 }
 
