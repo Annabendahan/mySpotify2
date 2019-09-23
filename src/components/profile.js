@@ -5,6 +5,7 @@ import {Howl, Howler} from 'howler';
 import './profile.css'
 import pic1 from "../images/spotify.png"
 
+
 class Profile extends Component {
 
   state={
@@ -71,19 +72,12 @@ getArtist = () => {
 }
 
 handlePlay = () => {
-
-
-
-
     this.setState({
-      playing: true
+      playing: !this.state.playing
     })
 
-
     console.log("played")
-
     console.log(this.state.playing)
-
     console.log(ReactHowler)
   }
 
@@ -174,13 +168,10 @@ render() {
       </div>
 
 
-    <ReactHowler
-        src='https://api.spotify.com/v1/tracks/4PjcfyZZVE10TFd9EKA72r'
-        playing={this.state.playing}
-      />
-      <p onClick={this.handlePlay}>Play</p>
-       <p onClick={this.handlePlay2}>Play2</p>
-       <p onClick={this.handlePlay3}>Play3</p>
+
+
+
+
     </div>
 
 

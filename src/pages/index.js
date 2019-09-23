@@ -13,6 +13,7 @@ export default () => (
   <div className="gradient">
 
       <p>
+      <Nouveautes />
         {isLoggedIn() ? (
           <>
 
@@ -22,11 +23,11 @@ export default () => (
           </>
         ) : (
           <>
-            <Link to="/app/login">log in</Link>
+            <p className="login"> <Link to="/app/login">S'identifier</Link> </p>
           </>
         )}
 
-        <Nouveautes />
+
       </p>
     </div>
   </Layout>

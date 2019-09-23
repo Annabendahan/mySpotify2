@@ -28,6 +28,8 @@ class Login extends React.Component {
       <>
       <div className="background-p">
         <h1>De la musique pour tous</h1>
+        <div className="form">
+        <h2> S'identifier </h2>
         <form
           method="post"
           onSubmit={event => {
@@ -36,19 +38,20 @@ class Login extends React.Component {
           }}
         >
           <label>
-
-            <input type="text" name="username" onChange={this.handleUpdate} />
+            <p> Identifiant
+            <input type="text" name="username" onChange={this.handleUpdate} /> </p>
           </label>
           <label>
-
+             <p> Mot de passe
             <input
               type="password"
               name="password"
               onChange={this.handleUpdate}
-            />
+            /></p>
           </label>
-          <input type="submit" value="Log In" />
+          <input className="button-green" type="submit" value="S'identifier" />
         </form>
+        </div>
         </div>
       </>
     )

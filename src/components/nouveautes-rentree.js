@@ -21,10 +21,10 @@ myChangeHandler = (event) => {
 
 componentDidMount = () => {
 
-   let playlist_id = "37i9dQZEVXblh2kb8O99zT"
+  let playlist_id = "37i9dQZEVXblh2kb8O99zT"
   let user_id= "oql91c8w5ogq0nxa0nk81yxjb"
-  let token = "BQDL_kNSl0ulogjpeanbLpXnfj6IOf8PuZrbKx1FmEJKsi01JuRUib_muBU20ShUk_OLL9-_DoozNpAyM2oGmIGn9MXK-hLa0rf254mF8vvHqbni6jH_jf_udy-ZQZicj0x11qaErfWbol9AiKEqr5oRIK9Dxo4nonz3Jmi0"
-let playlist_tracks= this.state.playlist_tracks
+  let token = "BQD9RTC9sRoa9X6pZ_JhkpnEzgvesjGIR-sgUQ8_mW9vlSNuIO3lGGeUVMRyuYJbvFoYdRwFXfL5iiXeUVabbM3GEBNf6DI0E-xRp2puwIeY_70hGs0r9klyNlNv_8ngarO0pYQO1uyFeXZiqZZJ9ZM5i5EpBCGRHq7OmyG1"
+  let playlist_tracks= this.state.playlist_tracks
   let playlists_url = `https://api.spotify.com/v1/playlists/${playlist_id}`
 
 

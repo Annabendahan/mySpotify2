@@ -28,9 +28,15 @@
 
 .profil{
   position: absolute;
-  bottom: 20px
+  bottom: 50px
 }
 
+
+.deconnexion{
+  position: absolute;
+  bottom: 30px;
+  color: rgba(219, 219, 219, .23)
+}
 
 .navbar svg{
   margin: -3px;

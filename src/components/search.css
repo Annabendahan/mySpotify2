@@ -1,4 +1,9 @@
 
+.erreur{
+  padding: 50px;
+  color: red;
+}
+
 
 .artists-list{
   color: white;
@@ -9,9 +14,6 @@
 .artist{
   text-align: center;
   width: 100%;
-
-
-
 }
 
 .song{
@@ -56,6 +58,21 @@
 
 }
 
+
+.filter2{
+  visibility: hidden;
+  position: absolute;
+  top: 0px;
+  left:0px;
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 0, 0, .8 );
+  color: white;
+  text-align: center;
+  border-radius: 50%
+
+}
+
 .album svg{
   margin-top: 30%;
 }
@@ -68,7 +85,10 @@
 
 
 
-
+.album-artist{
+  font-size: .8rem;
+  margin-top: -20px;
+}
 
 .song-pic{
   width:200px;
@@ -92,7 +112,8 @@ padding-top: 250px;
 .artist-name-2{
   text-align: center;
   font-weight: 500;
-  font-size: 1rem
+  font-size: 1.2rem;
+  color: white;
 }
 
 
@@ -155,13 +176,18 @@ padding: 50px;
 }
 
 
+.track svg{
+  margin-top: 11px;
+}
+
+
 .track p{
   margin-bottom: 7px;
   margin-top: 7px
 }
 
 .song_num {
-  flex: 0 0 10%;
+
 }
 
 .song_pic{
@@ -192,6 +218,9 @@ margin-left: 50px
 
 .album-infos{
   flex: 0 0 25%;
+  color: white;
+  text-align: center;
+
 }
 
 
@@ -201,4 +230,10 @@ input{
   color: white;
   font-weight: 700;
   font-size: 2rem;
+}
+
+
+.date{
+  font-weight: 100;
+  font-size: .7rem;
 }
